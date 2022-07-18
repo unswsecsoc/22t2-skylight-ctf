@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My first Node js express app</title>
+</head>
+
+<body>
+    <p>I created an API that will do math for you!</p>
+
+    <form action="/math" method="get">
+        <label for="num1">Number 1:</label><br>
+        <input type="number" id="num1" name="num1" value="1"><br>
+        <label for="op">Operation:</label><br>
+        <select name="op" id="op">
+            <option value="add">Addition</option>
+            <option value="subtract">Subtraction</option>
+            <option value="multiply">Multiplication</option>
+            <option value="divide">Division</option>
+        </select><br>
+        <label for="num2">Number 2:</label><br>
+        <input type="number" id="num2" name="num2" value="2"><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

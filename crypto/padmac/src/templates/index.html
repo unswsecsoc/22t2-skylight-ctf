@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Padmac</title>
+</head>
+
+<body>
+    <script>
+        var cookiedata = null;
+
+        function requestcookie() {
+            fetch('/login', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    "name": "bob"
+                })
+            }).then((resp) => resp.json()).then((data) => {
+                output.style.color = '';
+                if (data.error) {
+                    output.innerText = data.reason;
+                    output.style.color = 'red';
+                } else {
+                    cookiedata = data;
+
+                    output.innerText = JSON.stringify(data, null, 2);
+                }
+            })
+        }
+
+        function accessflag() {
+            if (cookiedata === null) {
+                output.innerText = "You do not currently have a cookie";
+                output.style.color = 'red';
+                return;
+            }
+
+            fetch('/flag', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(cookiedata)
+            }).then((resp) => resp.json()).then((data) => {
+                output.style.color = '';
+                if (data.error) {
+                    output.innerText = data.reason;
+                    output.style.color = 'red';
+                } else {
+                    output.innerText = JSON.stringify(data, null, 2);
+                }
+            })
+        }
+    </script>
+
+    Request a cookie:
+
+    <button onclick="requestcookie()">REQUEST</button><br>
+
+    Access the flag:
+    <button onclick="accessflag()">ACCESS FLAG</button>
+
+    <pre id="output">
+
+    </pre>
+</body>
+
+</html>

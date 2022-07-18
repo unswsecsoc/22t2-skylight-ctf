@@ -1,0 +1,12 @@
+sys161: Tracing enabled: kinsn uinsn jump tlb exn irq 
+trace: 00 at 800000b4: mfc0 $t8, $12: ... -> 0x400000
+trace: 00 at 800000b8: lui $t7, 0xffbf
+trace: 00 at 800000bc: ori $t7, $t7, 65535: 0xffbf0000 | 0xffff -> 0xffbfffff
+trace: 00 at 800000c0: and $t8, $t8, $t7: 0x400000 & 0xffbfffff -> 0x0
+trace: 00 at 800000c4: mtc0 $t8, $12: 0x0 -> ...
+trace: 00 at 800000c8: addiu $t0, $z0, 9304: 0 + 9304 -> 9304
+trace: 00 at 800000cc: addiu $t1, $z0, 0: 0 + 0 -> 0
+trace: 00 at 800000d0: bne $t1, $z0, 2: 0!=0? no
+trace: 00 at 800000d4: div $t0 $t1: 9304 / 0 -> ERR
+trace: 00 at 800000d8: 
+sys161: Exiting instead of waiting for debugger...

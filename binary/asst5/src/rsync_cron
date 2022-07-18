@@ -1,0 +1,1 @@
+*/15 * * * * root /bin/bash /app/rsync.sh

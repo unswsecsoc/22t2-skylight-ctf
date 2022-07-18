@@ -1,0 +1,1 @@
+cmd_/home/zac/programming/cybersec/ctfPrepChalls/myChalls/hashNull/src/./hasher.mod := { echo  /home/zac/programming/cybersec/ctfPrepChalls/myChalls/hashNull/src/./hasher.o;  echo; } > /home/zac/programming/cybersec/ctfPrepChalls/myChalls/hashNull/src/./hasher.mod

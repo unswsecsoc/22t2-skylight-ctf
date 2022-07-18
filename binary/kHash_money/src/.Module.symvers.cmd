@@ -1,0 +1,1 @@
+cmd_/home/zac/programming/cybersec/ctfPrepChalls/myChalls/hashNull/src/Module.symvers := sed 's/\.ko$$/\.o/' /home/zac/programming/cybersec/ctfPrepChalls/myChalls/hashNull/src/modules.order | scripts/mod/modpost    -o /home/zac/programming/cybersec/ctfPrepChalls/myChalls/hashNull/src/Module.symvers -e -i Module.symvers   -T -

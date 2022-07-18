@@ -1,0 +1,1 @@
+cmd_/home/zac/programming/cybersec/ctfPrepChalls/myChalls/hashNull/src/./base64.mod := { echo  /home/zac/programming/cybersec/ctfPrepChalls/myChalls/hashNull/src/./base64.o;  echo; } > /home/zac/programming/cybersec/ctfPrepChalls/myChalls/hashNull/src/./base64.mod

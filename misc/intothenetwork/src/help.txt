@@ -1,0 +1,8 @@
+AVAILABLE COMMANDS:
+hi - say hi
+fact 1 - show the first fact
+fact 2 - show the second fact
+fact 3 - show the third fact
+fact 4 - show the fourth fact
+setpass NEWPASSWD - reset the admin password
+flag PASSWD - get the flag using the password
